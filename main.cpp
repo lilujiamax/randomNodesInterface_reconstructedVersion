@@ -59,6 +59,7 @@ int main() {
     Group G;
     G.readNodes();
     G.findNeighbors();
+    G.findCorners();
 }
 
 Node::Node() {
@@ -214,9 +215,14 @@ void Group::findNeighbors() {
 }
 
 void Group::findCorners() {
-    double allowableError;
-    string allowableErrorString;
-    cout << "Please define an allowed error for corners (default 0.5): ";
-    getline(allowableErrorString, cin);
-
+    double allowableError = 0.5;
+    for (auto each : inputNodeGroup) {
+        double a = each.distance(inputNodeGroup[each.neighbors[0]]);
+        double b = each.distance(inputNodeGroup[each.neighbors[1]]);
+        double c = inputNodeGroup[each.neighbors[0]].distance(inputNodeGroup[each.neighbors[1]]);
+        double radius = acos((a * a + b * b - c * c) / (2 * a * b));
+        if (radius >= PI / 2 - allowableError && radius <= PI / 2 + allowableError) {
+            corners.push_back(each);
+        }
+    }
 }
