@@ -217,6 +217,6 @@ void Group::findCorners() {
     double allowableError;
     string allowableErrorString;
     cout << "Please define an allowed error for corners (default 0.5): ";
-    getline(allowableErrorString, cin);
+//    getline(allowableErrorString, cin);
 
 }
