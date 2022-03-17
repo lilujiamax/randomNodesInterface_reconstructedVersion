@@ -1,0 +1,60 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.21"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "randomNodesInterface_reconstructedVersion",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "randomNodesInterface_reconstructedVersion::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-randomNodesInterface_reconstructedVersion-Debug-8a4161d29a89ac6c79fe.json",
+					"name" : "randomNodesInterface_reconstructedVersion",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/Users/lilujia/CLionProjects/randomNodesInterface_reconstructedVersion/cmake-build-debug",
+		"source" : "/Users/lilujia/CLionProjects/randomNodesInterface_reconstructedVersion"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 3
+	}
+}
