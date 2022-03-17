@@ -46,9 +46,11 @@ struct Quad {
 
 class Group {
 public:
+    Group();
     void readNodes();
     void findNeighbors();
     void findCorners();
+    void constructClockwisedLargeBorders();
 private:
     vector<Node> inputNodeGroup;
     vector<Node> arrangedInputNodeGroup;
@@ -140,6 +142,12 @@ Quad::Quad(int index, Node n1, Node n2, Node n3, Node n4) {
     this->index = index;
 }
 
+Group::Group() {
+    inputNodeGroup.clear();
+    arrangedInputNodeGroup.clear();
+    corners.clear();
+}
+
 void Group::readNodes() {
     string fileName;
     cout << "Please input the name of .pl2 file you want to read: ";
@@ -225,4 +233,16 @@ void Group::findCorners() {
             corners.push_back(each);
         }
     }
+}
+
+void Group::constructClockwisedLargeBorders() {
+    int i = 0
+    int index = inputNodeGroup[i].neighbors[0];
+    arrangedInputNodeGroup.push_back(inputNodeGroup[0]);
+    while (index != inputNodeGroup[].index) {
+        arrangedInputNodeGroup.push_back(inputNodeGroup[index]);
+        index =
+    }
+    //To judge if the borders are clockwised
+
 }
